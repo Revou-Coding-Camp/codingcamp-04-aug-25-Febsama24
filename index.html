@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Camp To Do List RevoU</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    
+  </head>
 
-<body>
-    <h1>Hello World!</h1>
-</body>
+  <body>
+    <div class="container">
+    
+      <!-- Judul -->
+      <h2>Todo List</h2>
 
+      <!-- Form Todo List -->
+      <div class="form">
+        <input type="text" id="task-input" placeholder="Add a todo..." />
+        <input type="date" id="date-input" />
+        <button id="add-btn">+</button>
+      </div>
+
+      <!-- Button Filter and Delete All -->
+      <div class="actions">
+        <button id="filter-btn">FILTER</button>
+        <button id="delete-all-btn">DELETE ALL</button>
+      </div>
+
+      <!-- Tabel Todo List yang sudah di isi -->
+      <table>
+        <thead>
+          <tr>
+            <th>TASK</th>
+            <th>DUE DATE</th>
+            <th>STATUS</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody id="todo-list">
+          <tr>
+            <td colspan="4" style="text-align: center">No task found</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./js/script.js"></script>
+    
+  </body>
 </html>
